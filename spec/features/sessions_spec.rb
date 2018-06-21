@@ -8,7 +8,7 @@ describe 'Sessions Features' do
 
       expect(page.status_code).to eq(200)
       expect(page).to have_selector('form')
-      expect(page).to have_field(:name)
+      expect(page).to have_field('name', type: 'text')
     end
   end
 
