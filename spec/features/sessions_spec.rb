@@ -19,6 +19,11 @@ describe 'Sessions Features' do
       expect(page.current_path).to eq('http://example.com')
       expect(page).to have_content("Welcome, Emily")
     end
+
+    it 'returns a user to the login page if the form submission is not valid' do 
+      visit '/login'
+      click_button 'Login'
+    end 
   end
 
 end
