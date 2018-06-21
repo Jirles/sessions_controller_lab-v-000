@@ -41,7 +41,7 @@ describe 'Sessions Features' do
       click_button "logout"
 
       expect(page.current_path).to eq("/")
-      expect(page).to have_link("login")
+      expect(page).to have_link("Login")
     end
   end
 
