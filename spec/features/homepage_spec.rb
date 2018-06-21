@@ -13,6 +13,7 @@ describe "Homepage Feature" do
     click_button "Login"
 
     expect(page).to have_content("Welcome, ")
+    expect(page).to have_link("Logout")
   end
 
 end
