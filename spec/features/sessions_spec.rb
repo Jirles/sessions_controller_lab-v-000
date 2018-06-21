@@ -33,15 +33,15 @@ describe 'Sessions Features' do
     before do
       visit '/login'
       fill_in(:name, with: 'Emily')
-      click_button 'Login'
+      click_button 'login'
     end
 
     it 'logs a user out of the application by clearing the session hash and returns them to the homepage page' do
       visit '/'
-      click_button "Logout"
+      click_button "logout"
 
       expect(page.current_path).to eq("http://www.example.com")
-      expect(page).to have_link("Login")
+      expect(page).to have_link("login")
     end
   end
 
