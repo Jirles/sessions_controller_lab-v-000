@@ -40,7 +40,7 @@ describe 'Sessions Features' do
       visit '/'
       click_button "logout"
 
-      expect(page.current_path).to eq("http://www.example.com")
+      expect(page.current_path).to eq("/")
       expect(page).to have_link("login")
     end
   end
