@@ -6,14 +6,14 @@ class ApplicationController < ActionController::Base
   def hello
     if logged_in?
       set_user
-    end 
+    end
   end
 
-  private 
+  private
   def logged_in?
     !!session[:name]
   end
-  
+
   def set_user
     @user = session[:name]
   end
