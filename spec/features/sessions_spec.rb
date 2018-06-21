@@ -14,7 +14,7 @@ describe 'Sessions Features' do
     it 'submits a form and logs a user in and redirects them to the homepage' do
       visit '/login'
       fill_in(:name, with: 'Emily')
-      click_button 'Login'
+      click_button 'login'
 
       expect(page.current_path).to eq('http://www.example.com')
       expect(page).to have_content("Welcome, Emily")
