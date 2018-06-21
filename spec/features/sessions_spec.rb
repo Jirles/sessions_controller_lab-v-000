@@ -20,10 +20,13 @@ describe 'Sessions Features' do
       expect(page).to have_content("Welcome, Emily")
     end
 
-    it 'returns a user to the login page if the form submission is not valid' do 
+    it 'returns a user to the login page if the form submission is not valid' do
       visit '/login'
       click_button 'Login'
-    end 
+
+      expect(page.current_path).to include('/login')
+      expect(page).to have_content("You must enter a name to login.")
+    end
   end
 
 end
