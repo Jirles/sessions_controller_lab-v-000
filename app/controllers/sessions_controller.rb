@@ -3,8 +3,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    session[:name] = params[:name]
-    redirect_to root_path
+    if valid_submission?
+      session[:name] = params[:name]
+      redirect_to root_path
+    else 
+      flash[:alert] = "You must enter a name to login."
+    end 
   end
 
   def destroy
