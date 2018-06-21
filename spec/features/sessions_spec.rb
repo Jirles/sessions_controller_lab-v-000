@@ -36,8 +36,11 @@ describe 'Sessions Features' do
       click_button 'Login'
     end
 
-    it '' do
+    it 'logs a user out of the application and returns them to the logout page' do
+      visit '/'
 
+      click_button "Logout"
+      expect(page).to have_link("Login")
     end
   end
 
