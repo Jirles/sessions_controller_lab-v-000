@@ -17,7 +17,7 @@ describe 'Sessions Features' do
       click_button 'Login'
 
       expect(page.current_path).to eq('http://example.com')
-
+      expect(page).to have_content("Welcome, Emily")
     end
   end
 
