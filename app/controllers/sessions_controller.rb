@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       redirect_to root_path
     else
       flash[:alert] = "You must enter a name to login."
-      render :new
+      redirect_to login_path
     end
   end
 
