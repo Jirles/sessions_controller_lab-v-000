@@ -8,7 +8,7 @@ describe 'Sessions Features' do
 
       expect(page.status_code).to eq(200)
       expect(page).to have_selector('form')
-      expect(page).to have_field('name', type: 'text')
+      expect(page).to have_field(:name)
     end
 
     it 'submits a form and logs a user in and redirects them to the homepage' do
