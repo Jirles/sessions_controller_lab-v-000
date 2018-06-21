@@ -6,9 +6,10 @@ class SessionsController < ApplicationController
     if valid_submission?
       session[:name] = params[:name]
       redirect_to root_path
-    else 
+    else
       flash[:alert] = "You must enter a name to login."
-    end 
+      render :new
+    end
   end
 
   def destroy
