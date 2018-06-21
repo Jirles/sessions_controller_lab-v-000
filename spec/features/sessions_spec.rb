@@ -22,7 +22,7 @@ describe 'Sessions Features' do
 
     it 'returns a user to the login page if the form submission is not valid' do
       visit '/login'
-      click_button 'Login'
+      click_button 'login'
 
       expect(page.current_path).to include('/login')
       expect(page).to have_content("You must enter a name to login.")
