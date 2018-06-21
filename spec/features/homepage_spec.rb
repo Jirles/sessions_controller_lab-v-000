@@ -9,10 +9,10 @@ describe "Homepage Feature" do
 
   it 'welcomes the user and shows them a logout link if logged in' do
     visit '/login'
-    #fill in fields
+    fill_in(:name => "Tom")
     click_button "Login"
 
-    expect(page).to have_content("Welcome, ")
+    expect(page).to have_content("Welcome, Tom")
     expect(page).to have_link("Logout")
   end
 
