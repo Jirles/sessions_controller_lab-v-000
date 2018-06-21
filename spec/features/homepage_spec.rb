@@ -7,4 +7,12 @@ describe "Homepage Feature" do
     expect(page).to have_link("Login")
   end
 
+  it 'welcomes the user and shows them a logout link if logged in' do
+    visit '/login'
+    #fill in fields
+    click_button "Login"
+
+    expect(page).to have_content("Welcome, ")
+  end
+
 end
