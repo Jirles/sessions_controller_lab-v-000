@@ -12,7 +12,7 @@ describe "Homepage Feature" do
     fill_in(:name, with: "Tom")
     click_button "login"
 
-    expect(page).to have_content("Welcome, Tom")
+    expect(page).to have_content("Hi, Tom")
     expect(page).to have_button("logout")
   end
 
