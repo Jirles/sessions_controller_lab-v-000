@@ -16,7 +16,7 @@ describe 'Sessions Features' do
       fill_in(:name, with: 'Emily')
       click_button 'login'
 
-      expect(page.current_path).to eq('http://www.example.com')
+      expect(page.current_path).to eq('/')
       expect(page).to have_content("Hi, Emily")
     end
 
