@@ -29,6 +29,16 @@ describe 'Sessions Features' do
     end
   end
 
-  context ''
+  context 'logout interface' do
+    before do
+      visit '/login'
+      fill_in(:name, with: 'Emily')
+      click_button 'Login'
+    end
+
+    it '' do
+
+    end
+  end
 
 end
