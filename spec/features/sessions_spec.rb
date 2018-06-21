@@ -11,12 +11,13 @@ describe 'Sessions Features' do
       expect(page).to have_field('name', type: 'text')
     end
 
-    it 'submits a form and logs a user in' do
+    it 'submits a form and logs a user in and redirects them to the homepage' do
       visit '/login'
       fill_in(:name => 'Emily')
       click_button 'Login'
 
       expect(page.current_path).to eq('http://example.com')
+
     end
   end
 
