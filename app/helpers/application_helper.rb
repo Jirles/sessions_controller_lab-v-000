@@ -2,7 +2,7 @@ module ApplicationHelper
 
   def logged_in?
     !!session[:name]
-  end 
+  end
   
   def set_user
     @user = session[:name]
