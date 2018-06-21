@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
   end
 
   private
-  
+
   def valid_submission?
     params[:name] && !params[:name].empty?
   end
